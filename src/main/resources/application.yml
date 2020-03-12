@@ -1,0 +1,40 @@
+server:
+  servlet:
+    contextPath: /api-postal-code
+  port: 8083
+
+spring:
+  profiles:
+    active: default
+  jpa:
+    database-platform:
+  logging:
+    level:
+      org.springframework.web: DEBUG
+      org.hibernate: DEBUG
+      com.example.demo: INFO
+    pattern:
+      console: "%d %-5level %logger : %msg%n"
+
+application:
+  datasource:
+    url:
+    username:
+    password:
+    driverClassName:
+  swagger:
+    version: 1.0
+    enabled: true
+    title: "demo-api API"
+    description: "Sample Swagger implementation for the `demo-api` service, leveraging annotations at the controller-method level."
+    basePackage: com.pedrovsn.controller
+    useDefaultResponseMessages: false
+    enableUrlTemplating: false
+    deepLinking: true
+    defaultModelsExpandDepth: 1
+    defaultModelExpandDepth: 1
+    displayOperationId: false
+    displayRequestDuration: false
+    filter: false
+    maxDisplayedTags: 0
+    showExtensions: false
